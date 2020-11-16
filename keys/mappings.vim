@@ -2,11 +2,11 @@
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-" Use alt + hjkl to resize windows
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <M-l>    :vertical resize +2<CR>
+" Use space + hjkl to resize windows
+nnoremap <space>j    :resize -2<CR>
+nnoremap <space>k    :resize -2<CR>
+nnoremap <space>l    :vertical resize -2<CR>
+nnoremap <space>h    :vertical resize +2<CR>
 
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -44,3 +44,6 @@ nnoremap <Leader>O O<Esc>^Da
 " toggle comments
 nnoremap <space>/ :Commentary<CR>
 vnoremap <space>/ :Commentary<CR>
+
+" toggle file tree
+nmap <space>t :NERDTreeToggle<CR>
