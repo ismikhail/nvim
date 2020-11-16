@@ -3,8 +3,8 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " Use space + hjkl to resize windows
-nnoremap <space>j    :resize -2<CR>
 nnoremap <space>k    :resize -2<CR>
+nnoremap <space>j    :resize +2<CR>
 nnoremap <space>l    :vertical resize -2<CR>
 nnoremap <space>h    :vertical resize +2<CR>
 
@@ -47,3 +47,10 @@ vnoremap <space>/ :Commentary<CR>
 
 " toggle file tree
 nmap <space>t :NERDTreeToggle<CR>
+
+" which key
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
+
+"fzf files"
+nnoremap<space>f :Files<CR>

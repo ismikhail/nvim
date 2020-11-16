@@ -19,5 +19,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
+  Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
