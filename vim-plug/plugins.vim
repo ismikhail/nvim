@@ -23,5 +23,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/gv.vim'
   Plug 'liuchengxu/vim-which-key'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
