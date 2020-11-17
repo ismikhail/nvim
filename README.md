@@ -14,3 +14,6 @@ neovim, fzf
 ## Install plugins
 1. Run `nvim`
 2. `:PlugInstall`
+
+## Install coc extensions
+`:CocInstall coc-json coc-tsserver coc-eslint coc-prettier`

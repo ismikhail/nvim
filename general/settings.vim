@@ -44,3 +44,6 @@ set nowritebackup
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 colorscheme "gruvbox"
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
