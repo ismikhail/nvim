@@ -1,4 +1,13 @@
-# nvim-config
+# nvim
+## Screenshots
+### Airline
+![Airline](https://raw.githubusercontent.com/ismikhail/nvim/master/images/airline.png)
+### Fzf
+![Fzf](https://raw.githubusercontent.com/ismikhail/nvim/master/images/fzf.png)
+### Nerdtree
+![Nerdtree](https://raw.githubusercontent.com/ismikhail/nvim/master/images/nerdtree.png)
+### Whichkey
+![Whichkey](https://raw.githubusercontent.com/ismikhail/nvim/master/images/whichkey.png)
 
 ## Requirements
 neovim, fzf
