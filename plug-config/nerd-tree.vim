@@ -1,7 +1,8 @@
 let g:NERDTreeWinPos = "right"
 
-augroup nerdtree_open
-    autocmd!
-    autocmd VimEnter * NERDTree | wincmd p
-augroup END
+" Uncomment to open nerdtree by default when starting vim
+" augroup nerdtree_open
+"     autocmd!
+"     autocmd VimEnter * NERDTree | wincmd p
+" augroup END
 
