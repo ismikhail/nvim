@@ -51,6 +51,9 @@ nnoremap <space>f :Files<CR>
 " quit
 nnoremap <space>q :qa<CR>
 
+" delete current buffer
+nnoremap <space>d :bd<CR>
+
 " close current buffer
 nnoremap <space>bd :bd<CR>
 
