@@ -8,12 +8,9 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-  Plug 'sheerun/vim-polyglot'
   Plug 'scrooloose/NERDTree'
   Plug 'jiangmiao/auto-pairs'
   Plug 'mhinz/vim-startify'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
   Plug 'airblade/vim-rooter'
   Plug 'tpope/vim-commentary'
   Plug 'morhetz/gruvbox'
@@ -23,6 +20,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/gv.vim'
   Plug 'liuchengxu/vim-which-key'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()

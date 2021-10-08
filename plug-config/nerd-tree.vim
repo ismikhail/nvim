@@ -1,4 +1,4 @@
-let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinPos = "right"
 
 " Uncomment to open nerdtree by default when starting vim
 " augroup nerdtree_open
