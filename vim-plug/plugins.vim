@@ -8,12 +8,9 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-  Plug 'sheerun/vim-polyglot'
   Plug 'scrooloose/NERDTree'
   Plug 'jiangmiao/auto-pairs'
   Plug 'mhinz/vim-startify'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
   Plug 'airblade/vim-rooter'
   Plug 'tpope/vim-commentary'
   Plug 'morhetz/gruvbox'
@@ -23,6 +20,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/gv.vim'
   Plug 'liuchengxu/vim-which-key'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'kristijanhusak/defx-git'
+  Plug 'kristijanhusak/defx-icons'
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'glepnir/lspsaga.nvim'
+  Plug 'folke/lsp-colors.nvim'
+  Plug 'nvim-lua/completion-nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 call plug#end()
