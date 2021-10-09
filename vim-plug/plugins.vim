@@ -13,7 +13,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'mhinz/vim-startify'
   Plug 'airblade/vim-rooter'
   Plug 'tpope/vim-commentary'
-  Plug 'morhetz/gruvbox'
+  Plug 'sainnhe/gruvbox-material'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'airblade/vim-gitgutter'

@@ -8,9 +8,6 @@ nnoremap <space>j    :resize +2<CR>
 nnoremap <space>l    :vertical resize -2<CR>
 nnoremap <space>h    :vertical resize +2<CR>
 
-inoremap jk <Esc>
-inoremap kj <Esc>
-
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
@@ -22,7 +19,7 @@ nnoremap <C-s> :w<CR>
 nnoremap <C-Q> :wq!<CR>
 " Use control-c instead of escape
 " <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better tabbing
 vnoremap < <gv
@@ -45,14 +42,8 @@ nmap <space>t :NERDTreeToggle<CR>
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 set timeoutlen=500
 
-" fzf files
-nnoremap <space>f :Files<CR>
-
 " quit
 nnoremap <space>q :qa<CR>
 
 " delete current buffer
 nnoremap <space>d :bd<CR>
-
-" close current buffer
-nnoremap <space>bd :bd<CR>
