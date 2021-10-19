@@ -36,7 +36,7 @@ nnoremap <space>/ :Commentary<CR>
 vnoremap <space>/ :Commentary<CR>
 
 " toggle file tree
-nmap <space>t :NERDTreeToggle<CR>
+nmap <space>e :NERDTreeToggle<CR>
 
 " which key
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
