@@ -4,10 +4,9 @@ source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/nerd-tree.vim
 source $HOME/.config/nvim/plug-config/lsp-colors.vim
 source $HOME/.config/nvim/plug-config/lspconfig.vim
-source $HOME/.config/nvim/plug-config/tree-sitter.vim
+source $HOME/.config/nvim/plug-config/completion.vim
 source $HOME/.config/nvim/plug-config/defx.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
-source $HOME/.config/nvim/plug-config/nvim-cmp.vim
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/keys/mappings.vim

@@ -3,7 +3,7 @@ lua << EOF
 EOF
 
 lua << EOF
-local nvim_lsp = require('lspconfig')
+local nvim_lsp = require'lspconfig'
 local protocol = require'vim.lsp.protocol'
 
 -- Use an on_attach function to only map the following keys 
@@ -41,7 +41,6 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
-
 end
 
 nvim_lsp.flow.setup {
@@ -50,8 +49,7 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
 }
 
 nvim_lsp.diagnosticls.setup {
