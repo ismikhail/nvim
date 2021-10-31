@@ -1,4 +1,6 @@
 vim.cmd('colorscheme gruvbox-material')
+-- vim.cmd('colorscheme mariana')
+
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_palette = 'original'
 vim.g.gruvbox_material_diagnostic_line_highlight = 1
