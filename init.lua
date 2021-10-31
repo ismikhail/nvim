@@ -1,7 +1,9 @@
-require('settings')
+require('general')
 require('plugins')
+require('theme')
+
 require('configs.treesitter')
 require('configs.lualine')
 require('configs.bufferline')
+require('configs.nvimtree')
 
-vim.cmd('colorscheme gruvbox-material')

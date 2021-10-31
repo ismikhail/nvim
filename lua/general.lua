@@ -34,4 +34,3 @@ vim.bo.expandtab = true
 
 vim.opt.termguicolors = true
 
-
