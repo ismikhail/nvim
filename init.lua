@@ -10,3 +10,6 @@ require('configs.nvimtree')
 require('configs.telescope')
 require('configs.whichkey')
 require('configs.autopairs')
+require('configs.lsp')
+require('configs.cmp')
+
