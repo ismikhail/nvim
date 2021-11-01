@@ -2,6 +2,7 @@ require('general')
 require('plugins')
 require('theme')
 require('keymap')
+require('autorun')
 
 require('configs.treesitter')
 require('configs.lualine')
