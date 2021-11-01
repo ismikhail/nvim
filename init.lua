@@ -9,4 +9,4 @@ require('configs.bufferline')
 require('configs.nvimtree')
 require('configs.telescope')
 require('configs.whichkey')
-
+require('configs.autopairs')

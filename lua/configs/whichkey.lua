@@ -5,7 +5,7 @@ local mappings = {
   Q = { ':wq<cr>', 'Save & Quit' },
   w = { ':w<cr>', 'Save' },
   x = { ':bdelete<cr>', 'Close' },
-  C = { ':e ~/.config/nvim/init.lua', 'Edit config' },
+  C = { ':e ~/.config/nvim/init.lua<cr>', 'Edit config' },
 }
 
 local opts = {
