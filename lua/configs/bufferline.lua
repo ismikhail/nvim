@@ -4,8 +4,4 @@ require("bufferline").setup{
     offsets = { { filetype = "NvimTree", text = "", padding = 1 } }
   }
 }
-vim.cmd[[
-  nnoremap <silent><S-l> :BufferLineCycleNext<CR>
-  nnoremap <silent><S-h> :BufferLineCyclePrev<CR>
-]]
 

@@ -1,8 +1,3 @@
-vim.cmd[[
-  nnoremap <silent> <Leader>f <cmd>Telescope find_files<cr>
-  nnoremap <silent> <Leader>s <cmd>Telescope live_grep<cr>
-]]
-
 local actions = require('telescope.actions')
 require('telescope').setup {
   defaults = {

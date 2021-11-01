@@ -1,8 +1,6 @@
 vim.wo.number = true
 vim.wo.wrap = false
 vim.wo.relativenumber = true
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 vim.o.hidden = true
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
@@ -30,6 +28,5 @@ vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
-
 vim.opt.termguicolors = true
 
