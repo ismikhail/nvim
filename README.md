@@ -1,7 +1,11 @@
 # nvim
 
 ## Requirements
-brew install neovim ripgrep tree-sitter luajit fd
+1.`brew install neovim ripgrep tree-sitter luajit fd`
+2. Install language serves
+```
+npm i -g vscode-langservers-extracted # html, css, json, eslint
+```
 
 ## Setup
 1. `mkdir ~/.config && cd ~/.config`
@@ -16,4 +20,4 @@ brew install neovim ripgrep tree-sitter luajit fd
 
 ## Install plugins
 1. Run `nvim`
-2. `:PlugInstall`
+2. `:PackerSync`
