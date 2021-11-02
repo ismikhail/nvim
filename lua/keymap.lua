@@ -28,4 +28,7 @@ map('n', '<S-h>', ':BufferLineCyclePrev<cr>', { noremap = true, silent = true })
 map('v', '<', '<gv', { noremap = true, silent = false })
 map('v', '>', '>gv', { noremap = true, silent = false })
 
+-- yank
+map('n', 'Y', 'y$', { noremap = true, silent = true })
+
 
