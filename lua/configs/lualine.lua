@@ -3,6 +3,9 @@ vim.api.nvim_exec([[
 ]], false)
 
 require('lualine').setup{
-  options = {theme = 'gruvbox'}
+  options = {
+    -- theme = 'gruvbox'
+    theme = 'onedark'
+  }
 }
 

@@ -1,6 +1,7 @@
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'sainnhe/gruvbox-material'
+  use 'navarasu/onedark.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'

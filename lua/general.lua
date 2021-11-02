@@ -30,3 +30,4 @@ vim.o.expandtab = true
 vim.bo.expandtab = true
 vim.opt.termguicolors = true
 
+vim.cmd[[set colorcolumn=100]]
