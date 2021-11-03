@@ -31,4 +31,13 @@ map('v', '>', '>gv', { noremap = true, silent = false })
 -- yank
 map('n', 'Y', 'y$', { noremap = true, silent = true })
 
+-- commentary
+map('n', '<leader>/', ':Commentary<cr>', { noremap = true, silent = false })
+map('v', '<leader>/', ':Commentary<cr>', { noremap = true, silent = false })
+
+-- Resize with arrows
+map('n', '<C-Up>', ':resize -2<CR>', { noremap = true, silent = false } )
+map('n', '<C-Down>', ':resize +2<CR>', { noremap = true, silent = false } )
+map('n', '<C-Left>', ':vertical resize -2<CR>', { noremap = true, silent = false } )
+map('n', '<C-Right>', ':vertical resize +2<CR>', { noremap = true, silent = false } )
 
