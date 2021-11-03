@@ -1,7 +1,8 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'sainnhe/gruvbox-material'
   use 'navarasu/onedark.nvim'
+  use 'tpope/vim-commentary'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -47,6 +48,8 @@ return require('packer').startup(function()
 
   -- Git
   use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
+  use 'junegunn/gv.vim'
 
   -- File navigation
   use 'ThePrimeagen/harpoon'
