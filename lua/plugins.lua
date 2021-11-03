@@ -44,5 +44,11 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+
+  -- Git
+  use 'tpope/vim-fugitive'
+
+  -- File navigation
+  use 'ThePrimeagen/harpoon'
 end)
 
