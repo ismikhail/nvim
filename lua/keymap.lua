@@ -41,3 +41,16 @@ map('n', '<C-Down>', ':resize +2<CR>', { noremap = true, silent = false } )
 map('n', '<C-Left>', ':vertical resize -2<CR>', { noremap = true, silent = false } )
 map('n', '<C-Right>', ':vertical resize +2<CR>', { noremap = true, silent = false } )
 
+-- LSP
+map('n', 'K', ':lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = false })
+map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = false })
+map('n', 'gr', ':lua vim.lsp.buf.references()<CR>', { noremap = true, silent = false })
+map('n', 'gI', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = false })
+map('n', 'gs', ':lua vim.lsp.buf.signature_help()<CR>', { noremap = true, silent = false })
+
+-- ["gl"] = {
+--   "<cmd>lua require'lvim.lsp.handlers'.show_line_diagnostics()<CR>",
+--   "Show line diagnostics",
+-- },
+
+
