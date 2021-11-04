@@ -2,12 +2,11 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 local servers = {
   'html',
   'cssls',
-  'tsserver',
   'emmet_ls',
   'sumneko_lua'
 }
-local system_name = "macOS"
 
+local system_name = "macOS"
 -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
 local sumneko_root_path = vim.fn.stdpath('data')..'/lspinstall/sumneko_lua/extension/server'
 local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
@@ -15,6 +14,35 @@ local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-s
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
+
+local lspconfig = require("lspconfig")
+require("null-ls").config {}
+lspconfig["null-ls"].setup {}
+
+lspconfig.tsserver.setup {
+  on_attach = function(client, bufnr)
+    local ts_utils = require("nvim-lsp-ts-utils")
+    client.resolved_capabilities.document_formatting = false
+
+    -- defaults
+    ts_utils.setup {
+      enable_import_on_completion = true,
+      -- eslint
+      eslint_enable_diagnostics = true,
+      -- formatting
+      enable_formatting = true,
+      formatter = "prettier",
+    }
+    -- required to fix code action ranges and filter diagnostics
+    ts_utils.setup_client(client)
+
+    -- no default maps, so you may want to define some here
+    -- local opts = { silent = true }
+    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", opts)
+    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", opts)
+    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
+  end
+}
 
 for _, server in pairs(servers) do
   local config = { capabilities = capabilities }
@@ -46,6 +74,6 @@ for _, server in pairs(servers) do
       },
     }
   end
-  require'lspconfig'[server].setup(config)
+  lspconfig[server].setup(config)
 end
 

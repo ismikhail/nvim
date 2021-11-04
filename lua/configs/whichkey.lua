@@ -19,7 +19,8 @@ local mappings = {
     a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', 'Code actions'},
     e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', 'Show line diagnostics'},
     n = {'<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', 'Go to next diagnostic'},
-    p = {'<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic'}
+    p = {'<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic'},
+    f = {'<cmd>lua vim.lsp.buf.formatting()<CR>', 'Format'},
   },
   h = {
     name = 'Harpoon',

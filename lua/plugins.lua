@@ -46,6 +46,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
 
+  -- Diagnostics
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+
   -- Git
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
@@ -53,5 +57,6 @@ return require('packer').startup(function(use)
 
   -- File navigation
   use 'ThePrimeagen/harpoon'
+
 end)
 

@@ -1,5 +1,5 @@
--- vim.cmd('colorscheme gruvbox-material')
-require('onedark').setup()
+vim.cmd('colorscheme gruvbox-material')
+-- require('onedark').setup()
 
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_palette = 'original'

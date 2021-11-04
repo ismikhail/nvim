@@ -4,8 +4,8 @@ vim.api.nvim_exec([[
 
 require('lualine').setup{
   options = {
-    -- theme = 'gruvbox'
-    theme = 'onedark'
+    theme = 'gruvbox'
+    -- theme = 'onedark'
   }
 }
 
