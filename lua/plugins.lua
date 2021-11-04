@@ -31,7 +31,6 @@ return require('packer').startup(function(use)
     end
   }
   use 'windwp/nvim-ts-autotag'
-  use 'p00f/nvim-ts-rainbow'
   use 'windwp/nvim-autopairs'
 
   -- LSP and Autocomplete
