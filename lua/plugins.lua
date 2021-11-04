@@ -56,6 +56,5 @@ return require('packer').startup(function(use)
 
   -- File navigation
   use 'ThePrimeagen/harpoon'
-
 end)
 
