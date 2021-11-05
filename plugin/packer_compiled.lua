@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/mikhail/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/mikhail/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/Users/mikhail/.local/share/nvim/site/pack/packer/start/gruvbox-material",
@@ -204,11 +209,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/mikhail/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-gitgutter"] = {
-    loaded = true,
-    path = "/Users/mikhail/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
-    url = "https://github.com/airblade/vim-gitgutter"
   },
   ["vim-vsnip"] = {
     loaded = true,
