@@ -1,4 +1,20 @@
-return require('packer').startup(function(use)
+local fn = vim.fn
+local packer = require('packer')
+local util = require('packer.util')
+local packer_compiled_path = fn.stdpath('config')..'/plugin/packer_compiled.lua'
+
+packer.init({
+  compile_path = packer_compiled_path,
+  display = {
+    open_fn = function()
+      return util.float({
+        border = 'single', height = math.ceil(vim.o.lines * 0.5)
+      })
+    end
+  }
+})
+
+packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'sainnhe/gruvbox-material'
   use 'navarasu/onedark.nvim'
@@ -57,5 +73,8 @@ return require('packer').startup(function(use)
 
   -- File navigation
   use 'ThePrimeagen/harpoon'
+
+  -- Display startup times
+  use 'dstein64/vim-startuptime'
 end)
 
