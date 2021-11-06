@@ -13,6 +13,7 @@ vim.o.conceallevel = 0
 vim.o.showtabline = 2
 vim.o.showmode = false
 vim.o.backup = false
+vim.o.swapfile = false
 vim.o.writebackup = false
 vim.o.updatetime = 300
 vim.o.timeoutlen = 500
