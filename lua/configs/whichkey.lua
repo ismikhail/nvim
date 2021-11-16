@@ -22,15 +22,6 @@ local mappings = {
     p = {'<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic'},
     f = {'<cmd>lua vim.lsp.buf.formatting()<CR>', 'Format'},
   },
-  h = {
-    name = 'Harpoon',
-    h = {':lua require("harpoon.ui").toggle_quick_menu()<cr>', 'Menu'},
-    a = {':lua require("harpoon.mark").add_file()<cr>', 'Add file'},
-    q = {'lua require("harpoon.ui").nav_file(1)<cr>'},
-    w = {'lua require("harpoon.ui").nav_file(2)<cr>'},
-    e = {'lua require("harpoon.ui").nav_file(3)<cr>'},
-    r = {'lua require("harpoon.ui").nav_file(4)<cr>'},
-  },
   g = {
     name = "Git",
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
@@ -52,9 +43,18 @@ local mappings = {
       "Checkout commit(for current file)",
     },
     d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
+      ":DiffviewOpen<cr>",
       "Git Diff",
     },
+  },
+  h = {
+    name = 'Harpoon',
+    h = {':lua require("harpoon.ui").toggle_quick_menu()<cr>', 'Menu'},
+    a = {':lua require("harpoon.mark").add_file()<cr>', 'Add file'},
+    q = {'lua require("harpoon.ui").nav_file(1)<cr>'},
+    w = {'lua require("harpoon.ui").nav_file(2)<cr>'},
+    e = {'lua require("harpoon.ui").nav_file(3)<cr>'},
+    r = {'lua require("harpoon.ui").nav_file(4)<cr>'},
   },
 }
 

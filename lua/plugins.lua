@@ -67,8 +67,8 @@ packer.startup(function(use)
 
   -- Git
   use 'tpope/vim-fugitive'
-  -- use 'airblade/vim-gitgutter'
   use 'lewis6991/gitsigns.nvim'
+  use 'sindrets/diffview.nvim'
   use 'junegunn/gv.vim'
 
   -- File navigation
