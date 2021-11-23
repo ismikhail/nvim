@@ -17,6 +17,7 @@ packer.init({
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'sainnhe/gruvbox-material'
+  use 'ayu-theme/ayu-vim'
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-commentary'
   use {

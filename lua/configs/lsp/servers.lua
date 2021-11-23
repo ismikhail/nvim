@@ -3,7 +3,8 @@ local servers = {
   'html',
   'cssls',
   'emmet_ls',
-  'sumneko_lua'
+  'sumneko_lua',
+  'solargraph'
 }
 
 local system_name = "macOS"
