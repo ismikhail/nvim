@@ -76,5 +76,7 @@ packer.startup(function(use)
 
   -- Display startup times
   use 'dstein64/vim-startuptime'
+
+  use "akinsho/toggleterm.nvim"
 end)
 

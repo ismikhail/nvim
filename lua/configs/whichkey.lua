@@ -1,5 +1,17 @@
 local wk = require'which-key'
 
+local Terminal = require('toggleterm.terminal').Terminal
+
+local toggle_float = function()
+  local float = Terminal:new({direction = "float"})
+  return float:toggle()
+end
+
+local toggle_lazygit = function()
+  local lazygit = Terminal:new({cmd = 'lazygit', direction = "float"})
+  return lazygit:toggle()
+end
+
 local mappings = {
   q = { ':q<cr>', 'Quit' },
   Q = { ':wq<cr>', 'Save & Quit' },
@@ -52,6 +64,11 @@ local mappings = {
     h = {':lua require("harpoon.ui").toggle_quick_menu()<cr>', 'Menu'},
     a = {':lua require("harpoon.mark").add_file()<cr>', 'Add file'},
   },
+  t = {
+    t = {":ToggleTerm<cr>", "Split Below"},
+    f = {toggle_float, "Floating Terminal"},
+    l = {toggle_lazygit, "LazyGit"}
+  }
 }
 
 local opts = {
