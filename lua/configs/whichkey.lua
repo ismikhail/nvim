@@ -51,10 +51,6 @@ local mappings = {
     name = 'Harpoon',
     h = {':lua require("harpoon.ui").toggle_quick_menu()<cr>', 'Menu'},
     a = {':lua require("harpoon.mark").add_file()<cr>', 'Add file'},
-    q = {'lua require("harpoon.ui").nav_file(1)<cr>'},
-    w = {'lua require("harpoon.ui").nav_file(2)<cr>'},
-    e = {'lua require("harpoon.ui").nav_file(3)<cr>'},
-    r = {'lua require("harpoon.ui").nav_file(4)<cr>'},
   },
 }
 
