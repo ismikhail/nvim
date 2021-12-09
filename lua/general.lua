@@ -34,9 +34,13 @@ vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 
 vim.cmd[[set colorcolumn=120]]
-vim.cmd[[ set showbreak=↪\ ]]
+vim.cmd[[set showbreak=↪\ ]]
 vim.cmd[[set list]]
 vim.cmd[[set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨]]
+vim.cmd[[
+  set nocompatible
+  filetype plugin on
+]]
 
 vim.cmd[[hi DiffAdd guifg=NONE guibg=#4b5632]]
 
