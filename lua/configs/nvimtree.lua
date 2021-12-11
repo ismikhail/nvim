@@ -30,7 +30,7 @@ vim.g.nvim_tree_icons = {
 }
 
 require'nvim-tree'.setup {
-  auto_close = true,
+  auto_close = false,
   view = {
     auto_resize = true,
     side = 'right',
