@@ -44,3 +44,7 @@ vim.cmd[[
 
 vim.cmd[[hi DiffAdd guifg=NONE guibg=#4b5632]]
 
+vim.cmd([[
+  autocmd CursorHold <buffer> lua require('configs.lsp.diagnostics').show_line_diagnostics()
+]])
+

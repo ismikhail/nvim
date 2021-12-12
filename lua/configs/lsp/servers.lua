@@ -7,43 +7,34 @@ local servers = {
   'solargraph'
 }
 
+local lspconfig = require("lspconfig")
+require("null-ls").config {}
+lspconfig["null-ls"].setup {}
+
+lspconfig.tsserver.setup {
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    local ts_utils = require("nvim-lsp-ts-utils")
+    client.resolved_capabilities.document_formatting = false
+
+    ts_utils.setup {
+      enable_import_on_completion = true,
+      eslint_enable_diagnostics = true,
+      enable_formatting = true,
+      formatter = "prettier",
+    }
+    -- required to fix code action ranges and filter diagnostics
+    ts_utils.setup_client(client)
+  end
+}
+
 local system_name = "macOS"
--- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
 local sumneko_root_path = vim.fn.stdpath('data')..'/lspinstall/sumneko_lua/extension/server'
 local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
-
-local lspconfig = require("lspconfig")
-require("null-ls").config {}
-lspconfig["null-ls"].setup {}
-
-lspconfig.tsserver.setup {
-  on_attach = function(client, bufnr)
-    local ts_utils = require("nvim-lsp-ts-utils")
-    client.resolved_capabilities.document_formatting = false
-
-    -- defaults
-    ts_utils.setup {
-      enable_import_on_completion = true,
-      -- eslint
-      eslint_enable_diagnostics = true,
-      -- formatting
-      enable_formatting = true,
-      formatter = "prettier",
-    }
-    -- required to fix code action ranges and filter diagnostics
-    ts_utils.setup_client(client)
-
-    -- no default maps, so you may want to define some here
-    -- local opts = { silent = true }
-    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", opts)
-    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", opts)
-    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
-  end
-}
 
 for _, server in pairs(servers) do
   local config = { capabilities = capabilities }
@@ -77,15 +68,4 @@ for _, server in pairs(servers) do
   end
   lspconfig[server].setup(config)
 end
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    -- This sets the spacing and the prefix, obviously.
-    virtual_text = {
-      spacing = 4,
-      prefix = ''
-    }
-  }
-)
 
