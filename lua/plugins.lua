@@ -20,6 +20,8 @@ packer.startup(function(use)
   use 'ayu-theme/ayu-vim'
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-commentary'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'

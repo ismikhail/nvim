@@ -32,6 +32,8 @@ vim.bo.expandtab = true
 vim.opt.termguicolors = true
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
+vim.opt.smartindent = true
+vim.opt.signcolumn = 'yes:1'
 
 vim.cmd[[set colorcolumn=120]]
 vim.cmd[[set showbreak=↪\ ]]
@@ -44,7 +46,11 @@ vim.cmd[[
 
 vim.cmd[[hi DiffAdd guifg=NONE guibg=#4b5632]]
 
-vim.cmd([[
+vim.cmd[[
   autocmd CursorHold <buffer> lua require('configs.lsp.diagnostics').show_line_diagnostics()
-]])
+]]
+
+vim.cmd[[
+  autocmd FileType apache setlocal commentstring=#\ %s
+]]
 
