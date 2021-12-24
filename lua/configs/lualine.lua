@@ -4,6 +4,7 @@ vim.api.nvim_exec([[
 
 require('lualine').setup{
   options = {
+    component_separators = { left = '', right = '' },
     theme = 'gruvbox'
     -- theme = 'ayu'
     -- theme = 'onedark'

@@ -21,7 +21,7 @@ local mappings = {
   l = {
     name = 'LSP',
     i = {':LspInfo<cr>', 'Connected Language Servers'},
-    k = {'<cmd>lua vim.lsp.buf.signature_help()<CR>', 'Signature help'},
+    -- k = {'<cmd>lua vim.lsp.buf.signature_help()<CR>', 'Signature help'},
     K = {'<cmd>lua vim.lsp.buf.hover()<CR>', 'Hover'},
     t = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', 'Type definition'},
     d = {'<cmd>lua vim.lsp.buf.definition()<CR>', 'Go to definition'},
@@ -30,8 +30,8 @@ local mappings = {
     R = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'Rename'},
     a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', 'Code actions'},
     e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', 'Show line diagnostics'},
-    n = {'<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', 'Go to next diagnostic'},
-    p = {'<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic'},
+    j = {'<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', 'Go to next diagnostic'},
+    k = {'<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic'},
     f = {'<cmd>lua vim.lsp.buf.formatting()<CR>', 'Format'},
   },
   g = {
@@ -54,10 +54,7 @@ local mappings = {
       "<cmd>Telescope git_bcommits<cr>",
       "Checkout commit(for current file)",
     },
-    d = {
-      ":DiffviewOpen<cr>",
-      "Git Diff",
-    },
+    d = { ":Gvdiffsplit<cr>", "Git Diff", },
   },
   h = {
     name = 'Harpoon',
