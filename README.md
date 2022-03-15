@@ -4,7 +4,7 @@
 1.`brew install neovim ripgrep tree-sitter luajit fd`
 2. Install language serves
 ```
-npm i -g vscode-langservers-extracted # html, css, json, eslint
+npm i -g vscode-langservers-extracted typescript-language-server eslint
 ```
 
 ## Setup
