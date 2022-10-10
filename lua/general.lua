@@ -36,7 +36,7 @@ vim.opt.list = true
 
 -- word = abc-gdf-asd
 
-vim.cmd[[ set iskeyword+=-]]
+vim.cmd[[set iskeyword+=-]]
 vim.cmd[[set showbreak=↪\ ]]
 vim.cmd[[set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨]]
 vim.cmd[[

@@ -19,6 +19,7 @@ map('n', '<leader>e', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
 -- telescope
 map('n', '<leader>f', ':Telescope find_files<cr>', { noremap = true, silent = true })
 map('n', '<leader>s', ':Telescope live_grep<cr>', { noremap = true, silent = true })
+map('n', '<leader>b', ':Telescope buffers<cr>', { noremap = true, silent = true })
 
 -- bufferbar
 map('n', '<S-l>', ':BufferLineCycleNext<cr>', { noremap = true, silent = true })
@@ -47,10 +48,4 @@ map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = f
 map('n', 'gr', ':lua vim.lsp.buf.references()<CR>', { noremap = true, silent = false })
 map('n', 'gI', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = false })
 map('n', 'gs', ':lua vim.lsp.buf.signature_help()<CR>', { noremap = true, silent = false })
-
--- ["gl"] = {
---   "<cmd>lua require'lvim.lsp.handlers'.show_line_diagnostics()<CR>",
---   "Show line diagnostics",
--- },
-
 

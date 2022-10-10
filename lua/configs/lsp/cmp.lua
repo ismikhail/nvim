@@ -9,7 +9,7 @@ local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
-local cmp = require'cmp'
+local cmp = require('cmp')
 local lspkind = require('lspkind')
 
 cmp.setup({
@@ -63,19 +63,20 @@ cmp.setup({
   })
 })
 
--- Use buffer source for `/`.
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = {
     { name = 'buffer' }
   }
 })
 
--- Use cmdline & path source for ':'.
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
     { name = 'path' }
   }, {
     { name = 'cmdline' }
   })
 })
-
