@@ -16,9 +16,12 @@ packer.init({
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+
+  -- themes
   use 'sainnhe/gruvbox-material'
-  use 'ayu-theme/ayu-vim'
+  use { "catppuccin/nvim", as = "catppuccin" }
   use 'navarasu/onedark.nvim'
+
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
@@ -26,6 +29,7 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}

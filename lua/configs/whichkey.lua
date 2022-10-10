@@ -29,7 +29,7 @@ local mappings = {
     r = {'<cmd>lua vim.lsp.buf.references()<CR>', 'References'},
     R = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'Rename'},
     a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', 'Code actions'},
-    e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', 'Show line diagnostics'},
+    e = {'<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<CR>', 'Show line diagnostics'},
     j = {'<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', 'Go to next diagnostic'},
     k = {'<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic'},
     f = {'<cmd>lua vim.lsp.buf.formatting()<CR>', 'Format'},
