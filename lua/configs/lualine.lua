@@ -7,7 +7,7 @@ require('lualine').setup{
     component_separators = { left = '', right = '' },
     -- theme = 'gruvbox'
     -- theme = 'ayu'
-    theme = 'onedark'
+    -- theme = 'onedark'
   }
 }
 

@@ -21,7 +21,9 @@ packer.startup(function(use)
   use 'sainnhe/gruvbox-material'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'navarasu/onedark.nvim'
+  use 'Mofiqul/vscode.nvim'
 
+  use "kyazdani42/nvim-web-devicons"
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
@@ -39,8 +41,10 @@ packer.startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons'
   }
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    }
   }
   use {
     'nvim-telescope/telescope.nvim',
