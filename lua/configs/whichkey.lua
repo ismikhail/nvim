@@ -18,6 +18,11 @@ local mappings = {
   w = { ':w<cr>', 'Save' },
   x = { ':bw<cr>', 'Close' },
   C = { ':e ~/.config/nvim/init.lua<cr>', 'Edit config' },
+  c = {
+    name = 'Custom formatting',
+    f = {':%!jq .<cr>', 'Format'},
+    u = {':%!jq -c .<cr>', 'Unformat'}
+  },
   l = {
     name = 'LSP',
     i = {':LspInfo<cr>', 'Connected Language Servers'},
@@ -62,8 +67,8 @@ local mappings = {
     a = {':lua require("harpoon.mark").add_file()<cr>', 'Add file'},
   },
   t = {
-    t = {":ToggleTerm<cr>", "Split Below"},
-    f = {toggle_float, "Floating Terminal"},
+    -- t = {":ToggleTerm<cr>", "Split Below"},
+    t = {toggle_float, "Floating Terminal"},
     l = {toggle_lazygit, "LazyGit"}
   }
 }

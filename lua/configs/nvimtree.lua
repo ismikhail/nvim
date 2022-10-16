@@ -1,12 +1,15 @@
+-- require('nvim-web-devicons').setup()
 require('nvim-tree').setup({
+  open_on_setup = true,
   renderer = {
     highlight_opened_files = 'all',
     icons = {
+      webdev_colors = true,
       show = {
         git = true,
         folder = true,
         file = true,
-        folder_arrow = false 
+        folder_arrow = false
       },
       glyphs = {
         git = {
@@ -53,13 +56,4 @@ require('nvim-tree').setup({
     enable = true
   }
 })
-
--- require("nvim-tree").setup({
---   view = {
---     adaptive_size = true,
---   },
---   filters = {
---     dotfiles = true,
---   },
--- })
 
