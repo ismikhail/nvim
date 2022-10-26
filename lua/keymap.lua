@@ -49,3 +49,5 @@ map('n', 'gr', ':lua vim.lsp.buf.references()<CR>', { noremap = true, silent = f
 map('n', 'gI', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = false })
 map('n', 'gs', ':lua vim.lsp.buf.signature_help()<CR>', { noremap = true, silent = false })
 
+-- maximizer
+map('n', '<leader>m', ':MaximizerToggle<CR>', { noremap = true, silent = false })

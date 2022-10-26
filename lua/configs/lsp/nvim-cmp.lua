@@ -9,8 +9,15 @@ local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
-local cmp = require('cmp')
-local lspkind = require('lspkind')
+local cmp_status, cmp = pcall(require, 'cmp')
+if not cmp_status then
+  return
+end
+
+local lspkind_status, lspkind = pcall(require, 'lspkind')
+if not lspkind_status then
+  return
+end
 
 cmp.setup({
   snippet = {

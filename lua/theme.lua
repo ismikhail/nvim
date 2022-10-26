@@ -4,7 +4,7 @@ vim.g.gruvbox_material_diagnostic_line_highlight = 1
 vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
 vim.g.gruvbox_material_statusline_style = 'original'
 
-vim.cmd('colorscheme gruvbox-material')
+local status, _ = pcall(vim.cmd, 'colorscheme gruvbox-material')
 
 -- require('vscode').setup {}
 
