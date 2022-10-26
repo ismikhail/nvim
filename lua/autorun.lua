@@ -6,8 +6,3 @@ vim.cmd[[
   autocmd CursorHold <buffer> lua require('configs.lsp.diagnostics').show_line_diagnostics()
 ]]
 
--- fix commentary?
-vim.cmd[[
-  autocmd FileType apache setlocal commentstring=#\ %s
-]]
-

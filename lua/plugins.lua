@@ -1,6 +1,14 @@
+local status, packer = pcall(require, 'packer')
+if not status then
+  return
+end
+
+local util_status, util = pcall(require, 'packer.util')
+if not util_status then
+  return
+end
+
 local fn = vim.fn
-local packer = require('packer')
-local util = require('packer.util')
 local packer_compiled_path = fn.stdpath('config')..'/plugin/packer_compiled.lua'
 
 packer.init({
@@ -14,19 +22,40 @@ packer.init({
   }
 })
 
-packer.startup(function(use)
+return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- themes
   use 'sainnhe/gruvbox-material'
   use { "catppuccin/nvim", as = "catppuccin" }
-  use 'navarasu/onedark.nvim'
   use 'Mofiqul/vscode.nvim'
 
+  -- essential
+  use 'szw/vim-maximizer'
+  use 'tpope/vim-surround'
   use "kyazdani42/nvim-web-devicons"
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
+  -- Autocomplete
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+
+  -- snippets
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+
+  -- managing &b installing lsp servers
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'jose-elias-alvarez/typescript.nvim'
+  use 'onsails/lspkind-nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -60,21 +89,9 @@ packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
 
-  -- LSP and Autocomplete
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
-  use 'onsails/lspkind-nvim'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
-
-  -- Diagnostics
+  -- Diagnostics & formatting
   use 'jose-elias-alvarez/null-ls.nvim'
-  use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+  use 'jayp0521/mason-null-ls.nvim'
 
   -- Git
   use 'tpope/vim-fugitive'
