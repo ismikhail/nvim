@@ -1,59 +1,58 @@
-local lspconfig_status, lspconfig = pcall(require, 'lspconfig')
+local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status then
-  return
+	return
 end
 
-local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then
-  return
+	return
 end
 
-local typescript_status, typescript = pcall(require, 'typescript')
+local typescript_status, typescript = pcall(require, "typescript")
 if not typescript_status then
-  return
+	return
 end
 
 local servers = {
-  'html',
-  'cssls',
-  'solargraph'
+	"html",
+	"cssls",
+	"solargraph",
 }
 
-local on_attach = function(client, bufnr)
-end
+local on_attach = function(client, bufnr) end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 typescript.setup({
-  server = {
-    capabilities = capabilities,
-    on_attach = on_attach
-  }
+	server = {
+		capabilities = capabilities,
+		on_attach = on_attach,
+	},
 })
 
-lspconfig['sumneko_lua'].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
-      },
-      workspace = {
-        library = {
-          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-          [vim.fn.stdpath('config') .. '/lua'] = true,
-        }
-      }
-    }
-  }
+lspconfig["sumneko_lua"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+			workspace = {
+				library = {
+					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+					[vim.fn.stdpath("config") .. "/lua"] = true,
+				},
+			},
+		},
+	},
 })
 
 for _, server in pairs(servers) do
-  lspconfig[server].setup({
-    capabilities = capabilities,
-    on_attach = on_attach
-  })
+	lspconfig[server].setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+	})
 end
 
 --- old config ---
@@ -123,4 +122,3 @@ end
 --   end
 --   lspconfig[server].setup(config)
 -- end
-
