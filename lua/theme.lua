@@ -6,7 +6,7 @@ vim.g.gruvbox_material_statusline_style = 'original'
 
 local status, _ = pcall(vim.cmd, 'colorscheme gruvbox-material')
 
--- require('vscode').setup {}
+-- require('vscode').setup({})
 
 -- vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
 -- require("catppuccin").setup()

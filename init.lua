@@ -1,6 +1,3 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 require('general')
 require('plugins')
 require('theme')
@@ -16,9 +13,9 @@ require('configs.whichkey')
 require('configs.autopairs')
 require('configs.gitsigns')
 require('configs.term')
-require('configs.nullls')
 require('configs.lsp.nvim-cmp')
 require('configs.lsp.mason')
 require('configs.lsp.lspconfig')
 require('configs.lsp.diagnostics')
+require('configs.lsp.null-ls')
 
