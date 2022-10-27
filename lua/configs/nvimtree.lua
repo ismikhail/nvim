@@ -1,5 +1,9 @@
--- require('nvim-web-devicons').setup()
-require("nvim-tree").setup({
+local status, nvim_tree = pcall(require, "nvim-tree")
+if not status then
+  return
+end
+
+nvim_tree.setup({
 	open_on_setup = true,
 	renderer = {
 		highlight_opened_files = "all",
