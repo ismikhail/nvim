@@ -1,6 +1,14 @@
-local wk = require("which-key")
+local wk_status, wk = pcall(require, "which-key")
+if not wk_status then
+	return
+end
 
-local Terminal = require("toggleterm.terminal").Terminal
+local terminal_status, terminal = pcall(require, "toggleterm.terminal")
+if not terminal_status then
+	return
+end
+
+local Terminal = terminal.Terminal
 
 local toggle_float = function()
 	local float = Terminal:new({ direction = "float" })

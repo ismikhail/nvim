@@ -2,10 +2,6 @@
 
 ## Requirements
 1.`brew install neovim ripgrep tree-sitter luajit fd`
-2. Install language serves
-```
-npm i -g vscode-langservers-extracted typescript-language-server eslint
-```
 
 ## Setup
 1. `mkdir ~/.config && cd ~/.config`
@@ -20,4 +16,6 @@ npm i -g vscode-langservers-extracted typescript-language-server eslint
 
 ## Install plugins
 1. Run `nvim`
-2. `:PackerSync`
+2. Install plugins `:PackerSync` and exit
+3. Run `nvim` again
+4. Install language servers, linters and formatters `:Mason`
