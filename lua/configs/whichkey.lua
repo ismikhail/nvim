@@ -22,7 +22,7 @@ end
 
 local mappings = {
 	q = { ":q<cr>", "Quit" },
-	Q = { ":wq<cr>", "Save & Quit" },
+	Q = { ":qa<cr>", "Exit" },
 	w = { ":w<cr>", "Save" },
 	x = { ":bw<cr>", "Close" },
 	C = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },

@@ -38,6 +38,9 @@ return packer.startup(function(use)
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
+  -- tmux & split window navigation
+  use("christoomey/vim-tmux-navigator")
+
 	-- Autocomplete
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
