@@ -30,6 +30,9 @@ return packer.startup(function(use)
 	use("sainnhe/gruvbox-material")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("Mofiqul/vscode.nvim")
+	use("Shatur/neovim-ayu")
+	use("projekt0n/github-nvim-theme")
+	use("EdenEast/nightfox.nvim")
 
 	-- essential
 	use("szw/vim-maximizer")
@@ -38,8 +41,8 @@ return packer.startup(function(use)
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-  -- tmux & split window navigation
-  use("christoomey/vim-tmux-navigator")
+	-- tmux & split window navigation
+	use("christoomey/vim-tmux-navigator")
 
 	-- Autocomplete
 	use("hrsh7th/nvim-cmp")

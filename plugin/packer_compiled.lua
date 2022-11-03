@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -153,6 +158,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neovim-ayu"] = {
+    loaded = true,
+    path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/neovim-ayu",
+    url = "https://github.com/Shatur/neovim-ayu"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
