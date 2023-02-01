@@ -1,4 +1,5 @@
-local theme = "nightfox"
+-- ayu, nightfox, gruvbox, github, vscode, onedark, juliana
+local theme = "gruvbox"
 
 local init_gruvbox = function()
 	vim.g.gruvbox_material_background = "hard"
@@ -7,11 +8,15 @@ local init_gruvbox = function()
 	vim.g.gruvbox_material_diagnostic_virtual_text = "colored"
 	vim.g.gruvbox_material_statusline_style = "original"
 
-	local status, _ = pcall(vim.cmd, "colorscheme gruvbox-material")
+  vim.cmd("colorscheme gruvbox-material")
 end
 
 local init_nightfox = function()
   vim.cmd("colorscheme nordfox")
+end
+
+local init_juliana = function()
+  vim.cmd("colorscheme juliana")
 end
 
 local init_ayu = function()
@@ -47,11 +52,12 @@ end
 local init_onedark = function()
 	local status, onedark = pcall(require, "onedark")
 	if not status then
+    print "can't load `onedark`"
 		return
 	end
 
 	onedark.setup({
-		style = "warm", -- dark, darker, cool, deep, warm, warmer
+		style = "darker", -- dark, darker, cool, deep, warm, warmer
 	})
 	onedark.load()
 end
@@ -82,6 +88,8 @@ local setup = function()
 		init_catppuccin()
 	elseif theme == "nightfox" then
 		init_nightfox()
+  elseif theme == "juliana" then
+    init_juliana()
 	end
 end
 

@@ -33,6 +33,8 @@ return packer.startup(function(use)
 	use("Shatur/neovim-ayu")
 	use("projekt0n/github-nvim-theme")
 	use("EdenEast/nightfox.nvim")
+	use("navarasu/onedark.nvim")
+	use("kaiuri/nvim-juliana")
 
 	-- essential
 	use("szw/vim-maximizer")

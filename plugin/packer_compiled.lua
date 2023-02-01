@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-juliana"] = {
+    loaded = true,
+    path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/nvim-juliana",
+    url = "https://github.com/kaiuri/nvim-juliana"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -213,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/msmirnov/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

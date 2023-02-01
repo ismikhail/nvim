@@ -13,8 +13,10 @@ end
 lualine.setup({
 	options = {
 		component_separators = { left = "", right = "" },
+    theme = "auto"
 		-- theme = 'gruvbox'
 		-- theme = 'ayu'
 		-- theme = 'onedark'
 	},
 })
+

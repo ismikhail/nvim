@@ -35,10 +35,9 @@ vim.opt.smartindent = true
 vim.opt.signcolumn = "yes:1"
 vim.opt.colorcolumn = "120"
 vim.opt.list = true
--- vim.opt.iskeyword = '+=-'
+vim.opt.autoread = true
 
--- word = abc-gdf-asd
-
+vim.cmd([[set spell spelllang=en_us]])
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set showbreak=↪\ ]])
 vim.cmd([[set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨]])
