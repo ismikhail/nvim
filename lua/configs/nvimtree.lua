@@ -4,7 +4,6 @@ if not status then
 end
 
 nvim_tree.setup({
-	open_on_setup = true,
 	renderer = {
 		highlight_opened_files = "all",
 		icons = {
@@ -54,7 +53,7 @@ nvim_tree.setup({
 		},
 	},
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
 	},
 	update_focused_file = {
 		enable = true,

@@ -1,7 +1,7 @@
--- ayu, nightfox, gruvbox, github, vscode, onedark, juliana
+-- ayu, nightfox, gruvbox, github, vscode, onedark, juliana, catppuccin
 local theme = "gruvbox"
 
-local init_gruvbox = function()
+local function init_gruvbox()
 	vim.g.gruvbox_material_background = "hard"
 	vim.g.gruvbox_material_palette = "original"
 	vim.g.gruvbox_material_diagnostic_line_highlight = 1
@@ -11,15 +11,15 @@ local init_gruvbox = function()
   vim.cmd("colorscheme gruvbox-material")
 end
 
-local init_nightfox = function()
+local function init_nightfox()
   vim.cmd("colorscheme nordfox")
 end
 
-local init_juliana = function()
+local function init_juliana()
   vim.cmd("colorscheme juliana")
 end
 
-local init_ayu = function()
+local function init_ayu()
 	local status, ayu = pcall(require, "ayu")
 	if not status then
 		return
@@ -31,7 +31,7 @@ local init_ayu = function()
 	ayu.colorscheme()
 end
 
-local init_github = function()
+local function init_github()
 	local status, gh = pcall(require, "github-theme")
 	if not status then
 		return
@@ -40,7 +40,7 @@ local init_github = function()
 	gh.setup()
 end
 
-local init_vscode = function()
+local function init_vscode()
 	local status, vscode = pcall(require, "vscode")
 	if not status then
 		return
@@ -49,7 +49,7 @@ local init_vscode = function()
 	vscode.setup()
 end
 
-local init_onedark = function()
+local function init_onedark()
 	local status, onedark = pcall(require, "onedark")
 	if not status then
     print "can't load `onedark`"
@@ -62,18 +62,17 @@ local init_onedark = function()
 	onedark.load()
 end
 
-local init_catppuccin = function()
+local function init_catppuccin()
 	local status, catppuccin = pcall(require, "catppuccin")
 	if not status then
 		return
 	end
 
-	vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
-	catppuccin.setup()
-	vim.cmd([[colorscheme catppuccin]])
+  -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+	vim.cmd([[colorscheme catppuccin-macchiato]])
 end
 
-local setup = function()
+local function setup()
 	if theme == "gruvbox" then
 		init_gruvbox()
 	elseif theme == "onedark" then -- broken

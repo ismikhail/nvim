@@ -43,11 +43,9 @@ map("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = false
 map("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = false })
 
 -- LSP
-map("n", "K", ":lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = false })
-map("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = false })
-map("n", "gr", ":lua vim.lsp.buf.references()<CR>", { noremap = true, silent = false })
-map("n", "gI", ":lua vim.lsp.buf.implementation()<CR>", { noremap = true, silent = false })
-map("n", "gs", ":lua vim.lsp.buf.signature_help()<CR>", { noremap = true, silent = false })
+map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { noremap = true, silent = false })
+map("n", "gd", "<cmd>Lspsaga goto_definition<CR>", { noremap = true, silent = false })
+map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { noremap = true, silent = false })
 
 -- maximizer
 map("n", "<leader>m", ":MaximizerToggle<CR>", { noremap = true, silent = false })
