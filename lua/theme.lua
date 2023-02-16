@@ -1,4 +1,4 @@
--- ayu, nightfox, gruvbox, github, vscode, onedark, juliana, catppuccin
+-- ayu, gruvbox, github, onedark, catppuccin
 local theme = "gruvbox"
 
 local function init_gruvbox()
@@ -9,14 +9,6 @@ local function init_gruvbox()
 	vim.g.gruvbox_material_statusline_style = "original"
 
   vim.cmd("colorscheme gruvbox-material")
-end
-
-local function init_nightfox()
-  vim.cmd("colorscheme nordfox")
-end
-
-local function init_juliana()
-  vim.cmd("colorscheme juliana")
 end
 
 local function init_ayu()
@@ -40,15 +32,6 @@ local function init_github()
 	gh.setup()
 end
 
-local function init_vscode()
-	local status, vscode = pcall(require, "vscode")
-	if not status then
-		return
-	end
-
-	vscode.setup()
-end
-
 local function init_onedark()
 	local status, onedark = pcall(require, "onedark")
 	if not status then
@@ -63,7 +46,7 @@ local function init_onedark()
 end
 
 local function init_catppuccin()
-	local status, catppuccin = pcall(require, "catppuccin")
+	local status = pcall(require, "catppuccin")
 	if not status then
 		return
 	end
@@ -77,19 +60,13 @@ local function setup()
 		init_gruvbox()
 	elseif theme == "onedark" then -- broken
 		init_onedark()
-	elseif theme == "vscode" then -- broken
-		init_vscode()
 	elseif theme == "github" then
 		init_github()
 	elseif theme == "ayu" then
 		init_ayu()
 	elseif theme == "catppuccin" then
 		init_catppuccin()
-	elseif theme == "nightfox" then
-		init_nightfox()
-  elseif theme == "juliana" then
-    init_juliana()
-	end
+  end
 end
 
 setup()
