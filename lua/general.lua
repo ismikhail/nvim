@@ -37,7 +37,6 @@ vim.opt.colorcolumn = "120"
 vim.opt.list = true
 vim.opt.autoread = true
 
-vim.cmd([[set spell spelllang=en_us]])
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set showbreak=↪\ ]])
 vim.cmd([[set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨]])

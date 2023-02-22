@@ -86,7 +86,8 @@ return packer.startup(function(use)
 	})
 	use({
 		"akinsho/bufferline.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
+		tag = "v3.*",
+		requires = "nvim-tree/nvim-web-devicons",
 	})
 	use({
 		"nvim-tree/nvim-tree.lua",
