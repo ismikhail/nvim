@@ -8,9 +8,18 @@ local function init_gruvbox()
 	vim.g.gruvbox_material_diagnostic_virtual_text = "colored"
 	vim.g.gruvbox_material_statusline_style = "original"
 
-  vim.cmd("colorscheme gruvbox-material")
+	vim.cmd("colorscheme gruvbox-material")
 end
 
+local function init_vscode()
+	local status, vscode = pcall(require, "vscode")
+	if not status then
+		return
+	end
+
+	vscode.setup()
+	vscode.load()
+end
 local function init_ayu()
 	local status, ayu = pcall(require, "ayu")
 	if not status then
@@ -35,7 +44,6 @@ end
 local function init_onedark()
 	local status, onedark = pcall(require, "onedark")
 	if not status then
-    print "can't load `onedark`"
 		return
 	end
 
@@ -51,7 +59,7 @@ local function init_catppuccin()
 		return
 	end
 
-  -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+	-- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 	vim.cmd([[colorscheme catppuccin-macchiato]])
 end
 
@@ -66,8 +74,9 @@ local function setup()
 		init_ayu()
 	elseif theme == "catppuccin" then
 		init_catppuccin()
-  end
+	elseif theme == "vscode" then
+		init_vscode()
+	end
 end
 
 setup()
-

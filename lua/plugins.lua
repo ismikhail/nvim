@@ -127,4 +127,13 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 
 	use("vimwiki/vimwiki")
+
+	use({
+		"imNel/monorepo.nvim",
+		config = function()
+			require("monorepo").setup({})
+		end,
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		dev = true,
+	})
 end)
