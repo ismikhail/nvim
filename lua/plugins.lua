@@ -40,7 +40,12 @@ return packer.startup(function(use)
 	use("szw/vim-maximizer")
 	use("tpope/vim-surround")
 	use("kyazdani42/nvim-web-devicons")
-	use("tpope/vim-commentary")
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- tmux & split window navigation

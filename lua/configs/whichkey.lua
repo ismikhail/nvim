@@ -26,11 +26,6 @@ local mappings = {
 	w = { ":w<cr>", "Save" },
 	x = { ":bw<cr>", "Close" },
 	C = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
-	c = {
-		name = "Custom formatting",
-		f = { ":%!jq .<cr>", "Format" },
-		u = { ":%!jq -c .<cr>", "Unformat" },
-	},
 	l = {
 		name = "LSP",
 		a = { "<cmd>Lspsaga code_action<CR>", "Code actions" },

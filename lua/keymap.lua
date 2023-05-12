@@ -36,10 +36,6 @@ map("v", ">", ">gv", opt)
 -- yank
 map("n", "Y", "y$", opt_silent)
 
--- commentary
-map("n", "<leader>/", ":Commentary<cr>", opt)
-map("v", "<leader>/", ":Commentary<cr>", opt)
-
 -- Resize with arrows
 map("n", "<C-Up>", ":resize -2<CR>", opt)
 map("n", "<C-Down>", ":resize +2<CR>", opt)

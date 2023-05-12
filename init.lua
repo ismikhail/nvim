@@ -5,6 +5,7 @@ require("keymap")
 require("autorun")
 
 require("configs.treesitter")
+require("configs.comment")
 require("configs.lualine")
 require("configs.bufferline")
 require("configs.nvimtree")
