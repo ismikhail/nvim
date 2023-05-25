@@ -35,6 +35,7 @@ return packer.startup(function(use)
 	use("EdenEast/nightfox.nvim")
 	use("navarasu/onedark.nvim")
 	use("kaiuri/nvim-juliana")
+	use("loctvl842/monokai-pro.nvim")
 
 	-- essential
 	use("szw/vim-maximizer")

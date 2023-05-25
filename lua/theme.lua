@@ -1,5 +1,5 @@
--- ayu, gruvbox, github, onedark, catppuccin
-local theme = "gruvbox"
+-- ayu, gruvbox, github, onedark, catppuccin, vscode, monokai
+local theme = "monokai"
 
 local function init_gruvbox()
 	vim.g.gruvbox_material_background = "hard"
@@ -9,6 +9,20 @@ local function init_gruvbox()
 	vim.g.gruvbox_material_statusline_style = "original"
 
 	vim.cmd("colorscheme gruvbox-material")
+end
+
+local function init_monokai()
+	local status, monokai = pcall(require, "monokai-pro")
+	if not status then
+		return
+	end
+
+	monokai.setup({
+		background_clear = {
+			"telescope",
+		},
+	})
+	vim.cmd("colorscheme monokai-pro")
 end
 
 local function init_vscode()
@@ -39,6 +53,7 @@ local function init_github()
 	end
 
 	gh.setup()
+	vim.cmd("colorscheme github_dark")
 end
 
 local function init_onedark()
@@ -60,12 +75,14 @@ local function init_catppuccin()
 	end
 
 	-- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-	vim.cmd([[colorscheme catppuccin-macchiato]])
+	vim.cmd("colorscheme catppuccin-macchiato")
 end
 
 local function setup()
 	if theme == "gruvbox" then
 		init_gruvbox()
+	elseif theme == "monokai" then -- broken
+		init_monokai()
 	elseif theme == "onedark" then -- broken
 		init_onedark()
 	elseif theme == "github" then

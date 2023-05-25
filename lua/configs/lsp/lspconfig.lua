@@ -17,7 +17,7 @@ local servers = {
 	"html",
 	"cssls",
 	"solargraph",
-  "tailwindcss"
+	"tailwindcss",
 }
 
 local on_attach = function(client, bufnr) end
@@ -55,4 +55,3 @@ for _, server in pairs(servers) do
 		on_attach = on_attach,
 	})
 end
-

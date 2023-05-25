@@ -5,7 +5,7 @@ end
 
 bufferline.setup({
 	options = {
-		-- separator_style = 'slant',
+		separator_style = 'thick', -- padded_slant, slant, slope, thick, thin
 		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
 		diagnostics = "nvim_lsp",
 	},
