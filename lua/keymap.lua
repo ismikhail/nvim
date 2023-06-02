@@ -21,8 +21,8 @@ map("n", "<leader>e", ":NvimTreeToggle<cr>", opt_silent)
 -- telescope
 map("n", "<leader>f", ":Telescope find_files<cr>", opt_silent)
 map("n", "<leader>s", ":Telescope live_grep<cr>", opt_silent)
--- map("n", "<leader>b", ":Telescope buffers<cr>", opt_silent)
-map("n", "<leader>b", ":Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case<cr>", opt_silent)
+map("n", "<leader>b", ":Telescope buffers<cr>", opt_silent)
+map("n", "<leader>B", ":Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case<cr>", opt_silent)
 
 
 -- bufferbar
