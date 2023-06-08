@@ -1,25 +1,41 @@
 local telescope_status, telescope = pcall(require, "telescope")
 if not telescope_status then
-  return
+	return
 end
 
 local telescope_actions_status, actions = pcall(require, "telescope.actions")
 if not telescope_actions_status then
-  return
+	return
 end
 
 local previewers_status, previewers = pcall(require, "telescope.previewers")
 if not previewers_status then
-  return
+	return
 end
 
 local sorters_status, sorters = pcall(require, "telescope.sorters")
 if not sorters_status then
-  return
+	return
 end
+
+local lga_status, lga_actions = pcall(require, "telescope-live-grep-args.actions")
+if not lga_status then
+	return
+end
+
 
 telescope.setup({
 	extensions = {
+		live_grep_args = {
+			auto_quoting = true,
+			mappings = {
+				-- extend mappings
+				i = {
+					["<C-k>"] = lga_actions.quote_prompt(),
+					["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+				},
+			},
+		},
 		fzf = {
 			fuzzy = true, -- false will only do exact matching
 			override_generic_sorter = true, -- override the generic sorter
@@ -76,3 +92,4 @@ telescope.setup({
 })
 
 telescope.load_extension("fzf")
+telescope.load_extension("live_grep_args")
