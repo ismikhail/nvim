@@ -23,7 +23,6 @@ if not lga_status then
 	return
 end
 
-
 telescope.setup({
 	extensions = {
 		live_grep_args = {
