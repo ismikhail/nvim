@@ -21,7 +21,7 @@ vim.opt.writebackup = false
 vim.opt.updatetime = 300
 vim.opt.timeoutlen = 500
 vim.opt.clipboard = "unnamedplus"
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.cursorline = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -37,6 +37,7 @@ vim.opt.colorcolumn = "120"
 vim.opt.list = true
 vim.opt.autoread = true
 
+vim.cmd([[set spell spelllang=en_us]])
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set showbreak=↪\ ]])
 vim.cmd([[set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨]])
