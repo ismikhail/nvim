@@ -2,7 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.opt.number = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.relativenumber = true
 vim.opt.hidden = true
 vim.opt.encoding = "utf-8"
@@ -37,6 +37,7 @@ vim.opt.colorcolumn = "120"
 vim.opt.list = true
 vim.opt.autoread = true
 
+
 vim.cmd([[set spell spelllang=en_us]])
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set showbreak=↪\ ]])
@@ -44,6 +45,7 @@ vim.cmd([[set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precede
 vim.cmd([[
   set nocompatible
   filetype plugin on
+  syntax on
 ]])
 
 vim.cmd([[hi DiffAdd guifg=NONE guibg=#4b5632]])
