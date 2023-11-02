@@ -18,6 +18,7 @@ local servers = {
 	"cssls",
 	"solargraph",
 	"tailwindcss",
+	"yamlls",
 }
 
 local on_attach = function(client, bufnr) end

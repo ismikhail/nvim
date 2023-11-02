@@ -22,6 +22,7 @@ mason_lspconfig.setup({
 		"cssls",
 		"lua_ls",
 		"solargraph",
+		"yamlls",
 	},
 })
 
